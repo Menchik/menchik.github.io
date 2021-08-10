@@ -1,0 +1,862 @@
+<!doctype html>
+<html>
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link href="https://raw.githubusercontent.com/Ardiaz/Stewart-Ehoff.com/master/style.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <style>
+    /* General */
+    
+    .container {
+      width: 960px;
+    }
+    .underline {
+      border-bottom: 3px solid #7FCCE5;
+    }
+    .underlinegrey {
+      border-bottom: 3px solid #808080;
+    }
+    .underlineblack {
+      border-bottom: 3px solid #313131;
+    }
+    .underlinethin {
+      border-bottom: 1px solid #7FCCE5;
+    }
+    .circle-icon {
+      width: 80px;
+      height: 80px;
+      text-align: center;
+      /* 4 */ line-height: 80px;
+      font-size: 2.1em;
+      border-radius: 40px;
+      margin: auto;
+      color: #aaa;
+      background-color: #ddd;
+    }
+    .glyphicon {
+      position: relative;
+      display: inline-block;
+      font-family: 'Glyphicons Halflings';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+    }
+    .circle-icon .glyphicon {
+      top: 0;
+      line-height: 80px;
+      text-align: center;
+    }
+    /* Nav Bar */
+    
+    .nav {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid #ddd;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      padding: 5px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      width: 100%;
+    }
+    .nav .title {
+      position: fixed;
+      left: 100px;
+      top: -10px;
+    }
+    .logo-icon {
+      position: fixed;
+      left: 500px;
+      top: 8px;
+    }
+    /* Menu */
+    
+    .nav .menu {
+      float: right;
+      list-style: none;
+      margin-top: 5px;
+    }
+    .menu > li {
+      display: inline;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .menu a {
+      color: #898989;
+    }
+    .menu .border a {
+      border: 1px solid #7FCCE5;
+      padding: 15px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+    /* Dropdown */
+    
+    .dropdown-menu {
+      font-size: 16px;
+      margin-top: 5px;
+      min-width: 105px;
+      z-index: 999;
+    }
+    .dropdown-menu li a {
+      color: #898989;
+      padding: 6px 20px;
+      font-weight: 300;
+    }
+    /* Jumbotron */
+    
+    .jumbotron {
+      height: 1020px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: initial;
+    }
+    .jumbotron .container {
+      position: relative;
+      top: 250px;
+    }
+    .jumbotron h1 {
+      color: #fff;
+      font-size: 80px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      text-align: center;
+      padding: 20px;
+      text-shadow: 0px 0px 3px #000;
+    }
+    .jumbotron p {
+      color: #fff;
+      font-size: 48px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      text-align: center;
+      padding: 20px;
+      text-shadow: 0px 0px 3px #000;
+    }
+    .jumbotron h3 {
+      color: #fff;
+      font-size: 80px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      text-align: center;
+      padding: 20px;
+      text-shadow: 0px 0px 3px #000;
+    }
+    .btn {
+      display: inline-block;
+      padding: 4px 14px;
+      margin-bottom: 0px;
+      font-size: 13px;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      border-radius: 1px;
+      border-color: #f7f6f6;
+      line-height: 20px;
+      font-weight: bold;
+      color: #f7f6f6;
+      background-color: transparent;
+      position: relative;
+      top: 50px;
+      left: 340px;
+    }
+    .btn:hover {
+      background-image: none;
+      background-color: #808080;
+      color: #f7f6f6;
+    }
+    /* About Me */
+    
+    .about {
+      height: 600px;
+      background-color: #ffffff;
+    }
+    .about .container {
+      top: 35px;
+      position: relative;
+    }
+    .about h3 {
+      color: #313131;
+      font-size: 40px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding: 20px;
+      text-align: center;
+    }
+    .about p {
+      position: relative;
+      top: 20px;
+      color: #313131;
+      font-size: 20px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding: 30px;
+      line-height: 210%;
+    }
+    /* My Skills  */
+    
+    .myskills {
+      height: 880px;
+      background-color: #F7F6F6;
+    }
+    .myskills .container {
+      width: 1500px;
+      position: relative;
+      top: 35px;
+    }
+    .myskills .row {
+      position: relative;
+      text-align: center;
+      top: 80px;
+      padding-bottom: 50px;
+    }
+    .myskills h3 {
+      color: #808080;
+      font-size: 40px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      text-align: center;
+    }
+    .myskills h1 {
+      color: #808080;
+      font-size: 25px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      text-align: center;
+      padding-bottom: 50px;
+    }
+    .myskills p {
+      color: #808080;
+      font-size: 20px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding: 20px;
+      text-align: center;
+      line-height: 200%;
+    }
+    .glyphicon-heart {
+      color: red;
+    }
+    .glyphicon-picture {
+      color: orange;
+    }
+    .glyphicon-cloud {
+      color: white;
+    }
+    .glyphicon-camera {
+      color: black;
+    }
+    .glyphicon-book {
+      color: darkviolet;
+    }
+    .glyphicon-music {
+      color: orangered;
+    }
+    /* My Work */
+    
+    .mywork {
+      height: 400px;
+      background-color: #FFFFFF;
+    }
+    .mywork .container {
+      position: relative;
+      top: 35px;
+    }
+    .mywork h3 {
+      color: #313131;
+      font-size: 40px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+    .mywork h1 {
+      color: #313131;
+      font-size: 30px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+    .mywork p {
+      color: #313131;
+      font-size: 20px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding: 50px;
+      text-align: center;
+    }
+    /* Contact */
+    
+    .contact {
+      height: 330px;
+      background-color: #313131;
+    }
+    .contact .container {
+      position: relative;
+      top: 35px;
+    }
+    .contact .row {
+      width: 300px;
+      position: relative;
+      left: 325px;
+      text-align: center;
+      top: 30px;
+      padding-bottom: 40px;
+    }
+    .contact h3 {
+      color: #F7F6F6;
+      font-size: 40px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding: 20px;
+      text-align: center;
+    }
+    .contact h1 {
+      color: #808080;
+      font-size: 20px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding: 10px;
+      text-align: center;
+    }
+    .contact p {
+      color: #F7F6F6;
+      font-size: 16px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding-bottom: 15px;
+      text-align: center;
+    }
+    .contact a {
+      color: #7FCCE5;
+    }
+    /* Exploration */
+    
+    .exploration {
+      height: 1100px;
+      background-color: #ffffff;
+    }
+    .exploration .container {
+      position: relative;
+      top: 35px;
+      width: 1200px;
+    }
+    .exploration h3 {
+      color: #313131;
+      font-size: 40px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+    .exploration p {
+      color: #313131;
+      font-size: 20px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      text-align: center;
+    }
+    .slider {
+      position: relative;
+      top: 50px;
+      width: 100%;
+      height: 800px;
+    }
+    .slide {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .active-slide {
+      display: block;
+    }
+    /* Slide feature */
+    
+    .slide-feature {
+      text-align: center;
+      height: 800px;
+    }
+    .slide-feature-1 {
+      background-image: url('https://scontent-lhr.xx.fbcdn.net/hphotos-xaf1/t31.0-8/11036160_10152854777396270_5157414753497878003_o.jpg');
+      background-position: center;
+    }
+    .slide-feature-2 {
+      background-image: url('https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xta1/t31.0-8/11218515_10152909922431270_7749144937209461633_o.jpg');
+      background-position: center;
+    }
+    .slide-feature-3 {
+      background-image: url('https://scontent-lhr.xx.fbcdn.net/hphotos-xpa1/t31.0-8/11187795_10152891725491270_1769195601160147349_o.jpg');
+      background-position: bottom;
+    }
+    .slide-feature-4 {
+      background-image: url('https://scontent-lhr.xx.fbcdn.net/hphotos-xaf1/t31.0-8/11154672_10152854784061270_3532862830070230799_o.jpg');
+      background-position: center;
+    }
+    .slide-feature-5 {
+      background-image: url('https://scontent-lhr.xx.fbcdn.net/hphotos-xap1/t31.0-8/11164749_10152909922426270_8192461025609874418_o.jpg');
+      background-position: center;
+    }
+    .slide-feature img {
+      margin-top: 112px;
+      margin-bottom: 28px;
+    }
+    .slider-nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .arrow-prev {
+      margin-right: 45px;
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 9px;
+      position: relative;
+      top: 40px;
+    }
+    .arrow-next {
+      margin-left: 45px;
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 9px;
+      position: relative;
+      top: 40px;
+    }
+    .slider-dots {
+      list-style: none;
+      display: inline-block;
+      padding-left: 0;
+      margin-bottom: 0;
+      position: relative;
+      top: 40px;
+    }
+    .slider-dots li {
+      color: #bbbcbc;
+      display: inline;
+      font-size: 30px;
+      margin-right: 5px;
+    }
+    .slider-dots li.active-dot {
+      color: #7FCCE5;
+    }
+    /*Music*/
+    
+    .music {
+      height: 1200px;
+      background-color: #313131;
+    }
+    .music .container {
+      position: relative;
+      top: 35px;
+      width: 1500px;
+    }
+    .music h3 {
+      color: #F7F6F6;
+      font-size: 40px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+    .music h1 {
+      color: #808080;
+      font-size: 20px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding: 30px;
+      text-align: center;
+    }
+    .music p {
+      color: #F7F6F6;
+      font-size: 16px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding: auto;
+      text-align: center;
+    }
+    iframe {
+      position: relative;
+      top: 10px;
+      margin: 20px;
+    }
+    /* Footer */
+    
+    .footer {
+      height: 200px;
+      background-color: #F7F6F6;
+    }
+    .footer h1 {
+      color: #808080;
+      font-size: 20px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      text-align: center;
+      padding-bottom: 50px;
+      position: relative;
+      top: 35px;
+    }
+    .footer p {
+      color: #808080;
+      font-size: 16px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      padding: 20px;
+      text-align: center;
+      line-height: 200%;
+    }
+    </style>
+</head>
+
+<body>
+
+  <!-- NAV BAR -->
+  <div class="nav">
+    <div class="container">
+      <div class="title">
+        <h3>Allan Menchik</h3>
+      </div>
+
+      <ul class="menu">
+        <li><a href="#">Home</a>
+        </li>
+        <li><a href="#about">About</a>
+        </li>
+        <li><a href="#myskills">My Skills</a>
+        </li>
+        <li><a href="#mywork">My Work</a>
+        </li>
+        <li class="border"><a href="#contactme">Contact Me</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">More<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Exploration</a>
+            </li>
+            <li><a href="#">Music</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!--JUMBOTRON STARTS HERE-->
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Olá, meu nome é <b>Allan Menchik</b></h1>
+      <p>Sou um estudante de engenharia de computação e um desenvolvedor web auto-didata</p>
+      <h3>Let's work <em>together.</em> </h3>
+
+      <button type="button" class="btn">TELL ME MORE</button>
+      <button type="button" class="btn">RESUME</button>
+
+    </div>
+  </div>
+
+  <!--JUMBOTRON ENDS HERE-->
+
+  <!--ABOUT STARTS HERE-->
+
+  <div class="about" id="about">
+    <div class="container">
+      <h3><span class="underline">About Me</span></h3> 
+      <p>I'm a self-taught web developer living in Leicester, United Kingdom. I've been working with technology ever since I was a little boy.</p>
+      <p>In 2014, I graduated from De Montfort University with a First Class Honours in Music, Technology and Innovation. Shortly after graduating, I recieved an internship at a professional audio solutions company, and went on to conduct work for companies
+        such as Warner Records and Atlantic Records.</p>
+      <p>This website is the fruits of my labour, I hope you enjoy it.</p>
+    </div>
+  </div>
+
+  <!--MY SKILLS STARTS HERE-->
+
+  <div class="myskills" id="myskills">
+    <div class="container">
+      <h3><span class="underlineblack">My Skills</span></h3>
+
+      <!--Row 1-->
+
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="circle-icon">
+            <span class="glyphicon glyphicon-heart"></span>
+          </div>
+          <h1 class="underlinethin">Self-taught</h1> 
+          <p>Everything I know I've taught myself. I'd like to think that shows a solid level of drive and dedication.</p>
+        </div>
+
+        <div class="col-md-4">
+          <div class="circle-icon">
+            <span class="glyphicon glyphicon-picture"></span>
+          </div>
+          <h1 class="underlinethin">Front end development</h1> 
+          <p>Able to create modern, beautifully designed websites with HTML, CSS and JavaScript that feel great to use.</p>
+        </div>
+
+        <div class="col-md-4">
+          <div class="circle-icon">
+            <span class="glyphicon glyphicon-cloud"></span>
+          </div>
+          <h1 class="underlinethin">Frameworks and libaries</h1> 
+          <p>Confident with popular front-end (Bootstrap, jQuery) and back-end (Ruby on Rails) frameworks and libaries.</p>
+        </div>
+
+      </div>
+
+      <!--Row 2-->
+
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="circle-icon">
+            <span class="glyphicon glyphicon-camera"></span>
+          </div>
+          <h1 class="underlinethin">Photography</h1> 
+          <p>Photo taking, editting and asset creation in Adobe Photoshop and Lightroom.</p>
+        </div>
+
+        <div class="col-md-4">
+          <div class="circle-icon">
+            <span class="glyphicon glyphicon-book"></span>
+          </div>
+          <h1 class="underlinethin">Learning and problem solving</h1> 
+          <p>Constantly striving for educational progression, experimenting with new technologies and refining skills. I see a problem as a challenge to learn.</p>
+        </div>
+
+        <div class="col-md-4">
+          <div class="circle-icon">
+            <span class="glyphicon glyphicon-music"></span>
+          </div>
+          <h1 class="underlinethin">Audio</h1> 
+          <p>Audio engineer trained in building loudspeaker systems, recording, mixing and mastering audio.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!--MY WORK STARTS HERE-->
+
+  <div class="mywork" id="mywork">
+    <div class="container">
+      <h3><span class="underline">My Work</span></h3>
+      <h1>Coming <i>soon...</i></h1>
+      <p>I am always looking for exciting and innovative projects to work on. If you want to work together, then please <a href="contact">contact me!</a>
+      </p>
+    </div>
+  </div>
+
+  <!--CONTACT STARTS HERE-->
+
+  <div class="contact" id="contactme">
+    <div class="container">
+      <h3><span class="underlinegrey">Contact Me</span></h3>
+      <h1>Send me an email at <a href="#">stewartehoff@gmail.com</a> or find me on:</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="https://raw.githubusercontent.com/Ardiaz/Stewart-Ehoff.com/master/images/github.png">
+          <p>Github</p>
+        </div>
+        <div class="col-md-6">
+          <img src="https://raw.githubusercontent.com/Ardiaz/Stewart-Ehoff.com/master/images/linkedin.png">
+          <p>LinkedIn</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--FLIPBOARD STARTS HERE-->
+
+  <!--EDIT SLIDES HERE-->
+
+  <div class="exploration">
+
+    <div class="container">
+      <h3><span class="underline">Exploration</span></h3>
+      <p>I love exploring and capturing epic moments on my journeys. Here's some of my favourites from my latest trip across the west coast of America.</p>
+    </div>
+
+    <div class="slider">
+
+      <!--SLIDE 1 START-->
+
+      <div class="slide active-slide slide-feature slide-feature-1">
+        <div class="container">
+          <div class="row">
+
+          </div>
+        </div>
+      </div>
+
+      <!--SLIDE 1 END-->
+
+      <!--SLIDE 2 START-->
+
+      <div class="slide slide-feature slide-feature-2">
+        <div class="container">
+          <div class="row">
+
+          </div>
+        </div>
+      </div>
+
+      <!--SLIDE 2 END-->
+
+      <!--SLIDE 3 START-->
+
+      <div class="slide slide-feature slide-feature-3">
+        <div class="container">
+          <div class="row">
+
+          </div>
+        </div>
+      </div>
+
+      <!--SLIDE 3 END-->
+
+      <!--SLIDE 4 START-->
+
+      <div class="slide slide-feature slide-feature-4">
+        <div class="container">
+          <div class="row">
+
+          </div>
+        </div>
+      </div>
+
+      <!--SLIDE 4 END-->
+
+      <!--SLIDE 5 START-->
+
+      <div class="slide slide-feature slide-feature-5">
+        <div class="container">
+          <div class="row">
+
+          </div>
+        </div>
+      </div>
+
+      <!--SLIDE 5 END-->
+
+    </div>
+
+    <!--Slider navigation. Add more "<li class="dot">&bull;</li>" for more slides.-->
+
+    <div class="slider-nav">
+      <a href="#" class="arrow-prev">
+        <img src="https://raw.githubusercontent.com/Ardiaz/Stewart-Ehoff.com/master/images/arrow-left.svg">
+      </a>
+      <ul class="slider-dots">
+        <li class="dot active-dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+      </ul>
+      <a href="#" class="arrow-next">
+        <img src="https://raw.githubusercontent.com/Ardiaz/Stewart-Ehoff.com/master/images/arrow-right.svg">
+      </a>
+    </div>
+
+  </div>
+
+  <!--FLIPBOARD ENDS HERE-->
+
+  </div>
+
+  <div class="music">
+    <div class="container">
+      <h3><span class="underlinegrey">Music</span></h3>
+      <h1>In my early teens, I purchased my first drum kit. Now, I'm more than just a drummer, I'm a music producer too. Here are a few tracks from my production portfolio:</h1>
+
+      <!--Obscurity-->
+
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149734252&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+      <!--Deception-->
+
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/154191965&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+      <!--Circadian-->
+
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/154192672&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+      <!--Transhuman-->
+
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/73625501&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+      <h1>For more of my music, please visit my <a href='#'>SoundCloud</a> profile.</h1>
+
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <h1>A website by Stewart Ehoff</h1>
+      <p>I hope you enjoyed visiting my website. Please don't hesitate to contact me, I would <b>love</b> to hear from you!</p>
+    </div>
+  </div>
+
+  <script>
+    var main = function() {
+  $('.dropdown-toggle').click(function() {
+    $('.dropdown-menu').toggle();
+
+  });
+  //Next Arrow Functionality    
+  $('.arrow-next').click(function() {
+
+    var currentSlide = $('.active-slide');
+    var nextSlide = currentSlide.next();
+    var currentDot = $('.active-dot');
+    var nextDot = currentDot.next();
+
+    if (nextSlide.length == 0) {
+      nextSlide = $('.slide').first();
+      nextDot = $('.dot').first();
+    }
+
+    currentSlide.fadeOut(600).removeClass('active-slide');
+    nextSlide.fadeIn(600).addClass('active-slide');
+
+    currentDot.removeClass('active-dot');
+    nextDot.addClass('active-dot');
+
+  });
+  //Previous Arrow Click Functionality
+  $('.arrow-prev').click(function() {
+
+    var currentSlide = $('.active-slide');
+    var prevSlide = currentSlide.prev();
+
+    var currentDot = $('.active-dot');
+    var prevDot = currentDot.prev();
+
+    if (prevSlide.length == 0) {
+      prevSlide = $('.slide').last();
+      prevDot = $('.dot').last();
+    }
+
+
+    currentSlide.fadeOut(600).removeClass('active-slide');
+    prevSlide.fadeIn(600).addClass('active-slide');
+
+    currentDot.removeClass('active-dot');
+    prevDot.addClass('active-dot');
+
+  });
+};
+$(document).ready(main);</script>
+</body>
+
+</html>
