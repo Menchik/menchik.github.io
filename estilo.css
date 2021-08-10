@@ -1,0 +1,400 @@
+/* General */
+
+html,
+body,
+#home {
+  height: 100%;
+}
+
+body {
+  background: white;
+  background-attachment: fixed;
+}
+
+.underline {
+  border-bottom: 3px solid #7fcce5;
+}
+.underlinegrey {
+  border-bottom: 3px solid #808080;
+}
+.underlineblack {
+  border-bottom: 3px solid #313131;
+}
+.underlinethin {
+  border-bottom: 1px solid #7fcce5;
+}
+.circle-icon {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  /* 4 */
+  line-height: 80px;
+  font-size: 2.1em;
+  border-radius: 40px;
+  margin: auto;
+  color: #aaa;
+  background-color: #ddd;
+}
+.glyphicon {
+  position: relative;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+}
+.circle-icon .glyphicon {
+  top: 0;
+  line-height: 80px;
+  text-align: center;
+}
+/* Nav Bar */
+
+.nav {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #ddd;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  padding: 5px;
+  top: 0;
+  left: 0;
+}
+.nav .title {
+  position: fixed;
+  left: 100px;
+  top: -10px;
+}
+.logo-icon {
+  position: fixed;
+  left: 500px;
+  top: 8px;
+}
+/* Menu */
+
+.nav .menu {
+  float: right;
+  list-style: none;
+  margin-top: 5px;
+}
+.menu > li {
+  display: inline;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.menu a {
+  color: #898989;
+}
+.menu .border a {
+  border: 1px solid #7fcce5;
+  padding: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+/* Home */
+
+.capa {
+  text-align: center;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 5%;
+  text-decoration: none;
+}
+
+#home h1,
+#home h3,
+#home p {
+  color: #000;
+  font-size: 80px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  text-shadow: 0px 0px 3px #808080;
+}
+
+#home h3 {
+  color: #808080;
+  font-size: 60px;
+}
+
+#home p {
+  font-size: 60px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 4px 14px;
+  margin-bottom: 0px;
+  font-size: 13px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 1px;
+  border-color: #f7f6f6;
+  line-height: 20px;
+  font-weight: bold;
+  color: #f7f6f6;
+  background-color: transparent;
+  position: relative;
+  top: 50px;
+  left: 340px;
+}
+.btn:hover {
+  background-image: none;
+  background-color: #808080;
+  color: #f7f6f6;
+}
+/* About Me */
+
+.about {
+  height: 100%;
+  background-color: gray;
+}
+.about .container {
+  top: 35px;
+  position: relative;
+}
+.about h3 {
+  color: #313131;
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding: 20px;
+  text-align: center;
+}
+.about p {
+  position: relative;
+  top: 20px;
+  color: #313131;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding: 30px;
+  line-height: 210%;
+}
+/* My Skills  */
+
+.myskills {
+  height: 100%;
+  background-color: #f7f6f6;
+}
+.myskills .container {
+  position: relative;
+  top: 35px;
+}
+.myskills .row {
+  position: relative;
+  text-align: center;
+  top: 80px;
+}
+.myskills h3 {
+  color: #808080;
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+.myskills h1 {
+  color: #808080;
+  font-size: 25px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.myskills p {
+  color: #808080;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding: 20px;
+  text-align: center;
+  line-height: 200%;
+}
+.glyphicon-heart {
+  color: red;
+}
+.glyphicon-picture {
+  color: orange;
+}
+.glyphicon-cloud {
+  color: white;
+}
+.glyphicon-camera {
+  color: black;
+}
+.glyphicon-book {
+  color: darkviolet;
+}
+.glyphicon-music {
+  color: orangered;
+}
+/* My Work */
+
+.mywork {
+  height: 400px;
+  background-color: #ffffff;
+}
+.mywork .container {
+  position: relative;
+  top: 35px;
+}
+.mywork h3 {
+  color: #313131;
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.mywork h1 {
+  color: #313131;
+  font-size: 30px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.mywork p {
+  color: #313131;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding: 50px;
+  text-align: center;
+}
+/* Contact */
+
+.contact {
+  height: 330px;
+  background-color: #313131;
+}
+.contact .container {
+  position: relative;
+  top: 35px;
+}
+.contact .row {
+  position: relative;
+  left: 325px;
+  text-align: center;
+  top: 30px;
+  padding-bottom: 40px;
+}
+.contact h3 {
+  color: #f7f6f6;
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding: 20px;
+  text-align: center;
+}
+.contact h1 {
+  color: #808080;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding: 10px;
+  text-align: center;
+}
+.contact p {
+  color: #f7f6f6;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.contact a {
+  color: #7fcce5;
+}
+/* Exploration */
+
+.exploration {
+  height: 1100px;
+  background-color: #ffffff;
+}
+.exploration .container {
+  position: relative;
+  top: 35px;
+}
+.exploration h3 {
+  color: #313131;
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.exploration p {
+  color: #313131;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+/*Music*/
+
+.music {
+  height: 1200px;
+  background-color: #313131;
+}
+.music .container {
+  position: relative;
+  top: 35px;
+}
+.music h3 {
+  color: #f7f6f6;
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.music h1 {
+  color: #808080;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding: 30px;
+  text-align: center;
+}
+.music p {
+  color: #f7f6f6;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding: auto;
+  text-align: center;
+}
+iframe {
+  position: relative;
+  top: 10px;
+  margin: 20px;
+}
+/* Footer */
+
+.footer {
+  height: 200px;
+  background-color: #f7f6f6;
+}
+.footer h1 {
+  color: #808080;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 50px;
+  position: relative;
+  top: 35px;
+}
+.footer p {
+  color: #808080;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  padding: 20px;
+  text-align: center;
+  line-height: 200%;
+}
